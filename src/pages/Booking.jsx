@@ -1,11 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { supabase } from "../Supabase";
-function Booking() {
 
+function Booking() {
+    const location = useLocation();
     const [name, setName] = useState("");
     const [tickets, setTickets] = useState("");
     const [stand, setStand] = useState("");
     const [venue, setVenue] = useState("");
+
+    useEffect(() => {
+        if (location.state?.venue) {
+            if (location.state.venue.includes("Wankhede")) {
+                setVenue("Wankhede Stadium");
+            } else if (location.state.venue.includes("Chinnaswamy")) {
+                setVenue("M. Chinnaswamy Stadium");
+            }
+        }
+    }, [location.state]);
 
     async function handleBooking() {
 

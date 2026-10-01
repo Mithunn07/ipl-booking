@@ -321,3 +321,144 @@ body {
     border-bottom: 0;
   }
 }
+
+/* Home Page Styles */
+.home-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 24px 60px;
+}
+
+.home-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: linear-gradient(135deg, #182b49 0%, #294773 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(24, 43, 73, 0.2);
+  margin-bottom: 40px;
+}
+
+.home-hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.home-hero-text h1 {
+  color: #ffffff;
+  font-size: 38px;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.home-subtitle {
+  font-size: 17px;
+  color: #d1dded;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.home-cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background-color: #ffd700;
+  color: #182b49;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: #f5cc00;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.home-hero-image-wrapper {
+  flex: 0 0 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.home-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.feature-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  margin: 0 0 8px 0;
+  color: #182b49;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 28px 20px;
+  }
+
+  .home-hero-text {
+    text-align: center;
+  }
+
+  .home-cta-group {
+    justify-content: center;
+  }
+
+  .home-hero-text h1 {
+    font-size: 28px;
+  }
+}
+

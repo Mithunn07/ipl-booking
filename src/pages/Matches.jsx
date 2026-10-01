@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 function MatchCard(props) {
+  const navigate = useNavigate();
+
   return (
     <div className="match-card">
-
       <h2>
         {props.team1} vs {props.team2}
       </h2>
@@ -10,8 +13,9 @@ function MatchCard(props) {
 
       <p>📅 {props.date}</p>
 
-      <button>Book Ticket</button>
-
+      <button onClick={() => navigate("/booking", { state: { venue: props.venue } })}>
+        Book Ticket
+      </button>
     </div>
   );
 }
@@ -19,7 +23,6 @@ function MatchCard(props) {
 function Matches() {
   return (
     <main className="matches-page">
-
       <h1>Upcoming IPL Matches</h1>
 
       <div className="matches-grid">
@@ -35,9 +38,7 @@ function Matches() {
           venue="Wankhede Stadium, Mumbai"
           date="28 March 2026"
         />
-
       </div>
-
     </main>
   );
 }
