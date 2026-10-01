@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Matches from './pages/Matches';
@@ -8,7 +8,7 @@ import BookingHistory from './pages/BookingHistory';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,6 +16,6 @@ export default function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/history" element={<BookingHistory />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
